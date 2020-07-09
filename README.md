@@ -17,7 +17,9 @@ If you find our work useful in your research or publications, please consider ci
   title={Progressive residual networks for image super-resolution},
   author={Jin Wan and Hui Yin and Ai-Xin Chong and Zhi-Hao Liu},
   journal={Applied Intelligence},
+  volume={50},
   number={7},
+  pages={1620–1632},
   year={2020},
 }
 ```
