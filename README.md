@@ -61,7 +61,7 @@ If you find our work useful in your research or publications, please consider ci
    git clone https://github.com/jinwan1994/PRNet.git
    ```
 
-2. All the models (BIX2/3/4/8) can be downloaded from, place the models to `./experiment/model/`. 
+2. All the models (BIX2/3/4/8) can be downloaded from [BaiduYun](https://pan.baidu.com/s/1TiiEcvwkieCMdi6FqFTO2w)(5f61), place the models to `./experiment/model/`. 
 
 3. Cd to '/src', run the following scripts.
 
