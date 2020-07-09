@@ -90,7 +90,7 @@ Benchmark SISR results. Average PSNR/SSIM for scale factor x2, x3 and x4 on data
 
 #### Visual Results
 
-![](figs/Result_3.png)
+![visual](figs/Result_3.png)
 
 Visual comparison for x8 SR on  Manga109 and Urban100. dataset.
 
