@@ -1,0 +1,642 @@
+DataParallel(
+  (module): PRNetx2(
+    (sub_mean): MeanShift(3, 3, kernel_size=(1, 1), stride=(1, 1))
+    (add_mean): MeanShift(3, 3, kernel_size=(1, 1), stride=(1, 1))
+    (head): Sequential(
+      (0): Conv2d(3, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (head_1): Sequential(
+      (0): firstLayer_2(
+        (body): Sequential(
+          (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+      )
+    )
+    (body): Sequential(
+      (0): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (1): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (2): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (3): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (4): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (5): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (6): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (7): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (8): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (9): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (10): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (11): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (12): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (13): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (14): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (15): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (16): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (17): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (18): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (19): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (20): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (21): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (22): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (23): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (24): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (25): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (26): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (27): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (28): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+      (29): MultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler_2(
+            (0): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (body_1): Sequential(
+      (0): lastMultiBlock_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+        )
+        (up): Sequential(
+          (0): Upsampler(
+            (0): Conv2d(256, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (fs): Sequential(
+          (0): Conv2d(320, 256, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (body_2): Sequential(
+      (0): lastLayer_2(
+        (res): Sequential(
+          (0): ResBlock(
+            (body1): Sequential(
+              (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+              (1): ReLU(inplace)
+              (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            )
+          )
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+      )
+    )
+    (tail): Sequential(
+      (0): reconstruction_2(
+        (up): Sequential(
+          (0): Upsampler(
+            (0): Conv2d(256, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): PixelShuffle(upscale_factor=2)
+          )
+        )
+        (tail): Sequential(
+          (0): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1))
+          (1): Conv2d(256, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+      )
+    )
+  )
+)
+[Epoch 1]	Learning rate: 1.00e-4
