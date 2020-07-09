@@ -6,7 +6,7 @@ This repository is for PRNet introduced in the following paper
 
 The code is based on [EDSR (PyTorch)](https://github.com/thstkdgus35/EDSR-PyTorch) and tested on Ubuntu 18.04 environment (Python3.6, PyTorch_0.4.0, CUDA8.0, cuDNN5.1) with Titan X/1080Ti/Xp GPUs. .
 
-![](figs/Framework.png)
+![framework](/figs/Framework.png)
 
 The architecture of our proposed Progressive Residual Networks (PRNet). The details about our proposed PRNet can be found in [our main paper](http://link.springer.com/article/10.1007/s10489-019-01548-8).
 
@@ -60,7 +60,7 @@ Benchmark SISR results. Average PSNR/SSIM for scale factor x2, x3 and x4 on data
 
 ![](figs/visual_compare.png)
 
-Visual comparison for x3 SR on “img013�? “img062�? “img085”from the Urban100 dataset.
+Visual comparison for x3 SR on â€œimg013â€? â€œimg062â€? â€œimg085â€from the Urban100 dataset.
 
 ## Acknowledgements
 
